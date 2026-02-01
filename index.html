@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Property Portfolio Strategy Lab</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Property Portfolio Modelling</p>
+        <h1>Strategy Lab for 10-Year Wealth Planning</h1>
+        <p class="subhead">
+          Choose an investment strategy, set your budget and timeline, and compare must-have features
+          that leading portfolio tools offer today.
+        </p>
+        <div class="hero__actions">
+          <button class="primary" id="resetFilters">Reset filters</button>
+          <button class="ghost" id="downloadBrief">Download strategy brief</button>
+        </div>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__value" id="strategyCount">0</span>
+          <span class="stat__label">Strategies</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" id="featureCount">0</span>
+          <span class="stat__label">Must-have features</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" id="toolCount">0</span>
+          <span class="stat__label">Tool categories</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Build your plan</h2>
+        <p class="muted">
+          Filter the strategies and features that match your goals. This is a planning baseline you
+          can customize as we build your full web app.
+        </p>
+
+        <form class="filters" id="filtersForm">
+          <label class="field">
+            <span>Budget range</span>
+            <select id="budgetRange" name="budgetRange">
+              <option value="all">All ranges</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Timeframe</span>
+            <select id="timeframe" name="timeframe">
+              <option value="all">All timelines</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Risk appetite</span>
+            <select id="riskLevel" name="riskLevel">
+              <option value="all">All risk levels</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Goal focus</span>
+            <select id="goalFocus" name="goalFocus">
+              <option value="all">All goals</option>
+            </select>
+          </label>
+        </form>
+
+        <div class="cta-card">
+          <h3>Want a tailored build?</h3>
+          <p>
+            This demo captures the common feature set. We can connect live market data, integrate
+            calculators, and add AI insights for your portfolio in the next build.
+          </p>
+          <ul>
+            <li>Market scoring + suburb heat maps</li>
+            <li>Deal analysis + sensitivity tools</li>
+            <li>Portfolio cash flow + equity tracking</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <h2>Investment strategy menu</h2>
+            <p class="muted">Strategies update as you filter on budget, timeframe, and risk.</p>
+          </div>
+          <span class="pill" id="strategyBadge">0 selected</span>
+        </div>
+        <div class="grid" id="strategyGrid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <h2>Must-have features available in the market</h2>
+            <p class="muted">Core capabilities that portfolio tools tend to bundle together.</p>
+          </div>
+          <span class="pill" id="featureBadge">0 highlighted</span>
+        </div>
+        <div class="features" id="featureGrid"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Tool categories to compare</h2>
+        <p class="muted">
+          These represent typical software types that investment platforms provide. Use them as the
+          foundation for a full competitor comparison section.
+        </p>
+        <div class="tool-grid" id="toolGrid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Built for your portfolio planning. Next steps: add live data, personalized projections, and
+        investor dashboards.
+      </p>
+    </footer>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
